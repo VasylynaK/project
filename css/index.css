@@ -70,18 +70,24 @@ header{
 #nav li:hover > ul > li {
     float:none;
 }
-h1, h2 {
+h1 {
     text-align: center;
     font-style: italic;
     color: #a50303;
+    font-size: 30px;
+}
+h2 {
+	font-size: 24px;
 }
 .left {
     text-align: left;
     font-style: oblique;
+    margin-left: 60px;
 }
 .right {
     text-align: right;
     font-style: oblique;
+    margin-right: 60px;
 }
 p {
     text-align: left;
@@ -114,6 +120,10 @@ main #home {
     height: 260px;
     float: left;
     padding: 15px;
+    background-color: #f9eaea;
+}
+#reconstruction p {
+	background-color: #f9eaea;
 }
 
 #caries img {
@@ -128,6 +138,9 @@ main #home {
     float: left;
     padding: 15px;
 }
+#fillings p {
+	background-color: #f9eaea;
+}
 #veneers img {
     width: 400px;
     height: 180px;
@@ -139,6 +152,9 @@ main #home {
     height: 200px;
     float: left;
     padding: 15px;
+}
+#prosthesis p {
+	background-color: #f9eaea;
 }
 #smile-design img {
     width: 450px;
@@ -159,11 +175,17 @@ blockquote {
     float: left;
     padding: 15px;
 }
+#microprosthetics p {
+	background-color: #f9eaea;
+}
 #temporary-prosthesis img {
     width: 450px;
     height: 260px;
     float: right;
     padding: 15px;
+}
+#feedback {
+	background-color: #f9eaea;
 }
 #form {
     text-align: center;
@@ -232,7 +254,6 @@ input[type=submit]:hover {
 	font-style: oblique;
 	margin-left: 20px;
 	margin-right: 20px;
-	background-color: #f9f9f9;
 }
 #contact {
     column-count: 2;
