@@ -13,24 +13,26 @@ body {
 }
 main {
 	background-color: #ffffff;
-	margin-top: 120px;
+	margin-top: 100px;
 	padding: 10px;
 }
 header{
 	position: fixed;
 	top: 0;
-	height:120px;
+	height:100px;
 	background-color: #ffffff;
+	opacity: 0.9;
 }
 
 #logo img {
 	left:0;
 	width: 200px;
-	height: 120px;
+	height: 100px;
+	display: flex;
 }
 
 #nav {
-	margin-top: -100px;
+	margin-top: -80px;
 	margin-left: 488px;
 	list-style: none; 
 	background:#FFFFFF;
@@ -193,7 +195,6 @@ blockquote {
     padding: 1%;
 }
 .form {
-    position: relative;
     text-align: center;
     border-radius: 5px;
     padding: 20px;
