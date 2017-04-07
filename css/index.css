@@ -1,96 +1,145 @@
+* {
+    font-family: 'Kurale', serif;
+    font-size: 16px;
+}
+
 html, body {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 }
+
 html {
-	background-color: #f9f9f9;
+    background-color: #f9f9f9;
 }
+
 body {
-    font-family: Times, serif;
     margin-top: 50px;
-	max-width: 970px;
-	margin:0 auto;
+    max-width: 970px;
+    margin: 0 auto;
 }
+
 main {
-	background-color: #ffffff;
-	margin-top: 100px;
-	padding: 10px;
+    background-color: #fff7f8;
+    margin-top: 100px;
+    padding: 10px;
 }
-header{
-	position: fixed;
-	top: 0;
-	height:100px;
-	background-color: #ffffff;
-	opacity: 0.9;
+
+header {
+    position: fixed;
+    height: 100px;
+    background-color: #ffffff;
+    opacity: 0.9;
+    top: 0;
 }
 
 #logo img {
-	left:0;
-	width: 200px;
-	height: 100px;
-	display: flex;
+    left: 0;
+    width: 200px;
+    height: 100px;
 }
 
 #nav {
-	margin-top: -80px;
-	margin-left: 488px;
-	list-style: none; 
-	background:#FFFFFF;
+    margin-top: -80px;
+    margin-left: 339px;
+    list-style: none;
+    background: #FFFFFF;
 }
-#nav a {
-	text-decoration: none;
-	color: #a50303;
-	padding:0px 15px;
-	font-weight: bold;
-	font-style: italic;
-	font-size: 20px;
-	display: inline-block; 
-}
-#nav a:hover {
-  color: #F08080;
-}
-#nav li {
-  float:left;
-}
-     
 
-#nav li > ul {
-	position: absolute;
-	padding: 0;
-	margin-left: -50px; 
-	list-style: none;
-	background-color: #FFFFFF;
-    top:60px;
-    display:none;   
+header > nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
- 
 
-#nav li:hover > ul {
-    display:block;
-    width:220px;
+header > nav > ul > li {
+    flex: 0 1 auto;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: all linear 0.1s;
 }
-#nav li:hover > ul > li {
-    float:none;
+
+header > nav > ul > li:hover {
+    background: rgba(239, 197, 202, 0.96);
 }
+
+header > nav > ul > li a + div {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0, rgba(239, 197, 202, 0.96) 100%);
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 3px 1px rgba(0, 0, 0, .05);
+    display: none;
+    font-size: 1rem;
+    position: absolute;
+    width: 270px;
+}
+
+header > nav > ul > li:hover a + div {
+    display: block;
+}
+
+header > nav > ul > li a + div > ul {
+    list-style-type: none;
+}
+
+header > nav > ul > li a + div > ul > li {
+    margin: 0;
+    padding: 0;
+}
+
+header > nav > ul > li a + div > ul > li > a {
+    color: #a50303;
+    display: block;
+    font-size: .9rem;
+    letter-spacing: 1.5px;
+    margin-left: -40px;
+    padding: .25rem 1.5rem;
+    text-decoration: none;
+}
+
+header > nav > ul > li a + div > ul > li:hover > a {
+    background-color: #edb6c5;
+}
+
+header > nav > ul > li > a {
+    align-items: flex-end;
+    color: #a50303;
+    display: flex;
+    font-size: 1.55rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+    max-width: 130px;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    transition: all linear 0.1s;
+}
+
 h1 {
     text-align: center;
     font-style: italic;
     color: #a50303;
     font-size: 30px;
 }
+
 h2 {
-	font-size: 24px;
+    font-size: 24px;
 }
+
 .left {
     text-align: left;
     font-style: oblique;
     margin-left: 60px;
 }
+
 .right {
     text-align: right;
     font-style: oblique;
     margin-right: 60px;
 }
+
 p {
     text-align: left;
 }
@@ -104,17 +153,17 @@ main #home {
     align-items: flex-end;
     padding-left: 2%;
     padding-right: 1%;
-    
 }
+
 #about {
-	text-align: left;
-	font-weight: bold;
-	font-style: italic;
-	font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
     color: #a50303;
-    background-color: #fffaf7;
+    background-color: #f7eff0;
     opacity: 0.8;
-    
+    width: 100%;
 }
 
 #reconstruction img {
@@ -122,10 +171,10 @@ main #home {
     height: 260px;
     float: left;
     padding: 15px;
-    background-color: #f9eaea;
 }
-#reconstruction p {
-	background-color: #f9eaea;
+
+#reconstruction  {
+    background: linear-gradient(to bottom, rgba(255,237,241,1) 0%, rgba(237,182,197,1) 100%);
 }
 
 #caries img {
@@ -134,30 +183,36 @@ main #home {
     float: right;
     padding: 15px;
 }
+  
 #fillings img {
     width: 450px;
     height: 260px;
     float: left;
     padding: 15px;
 }
+
 #fillings p {
-	background-color: #f9eaea;
+     background: linear-gradient(to bottom, rgba(255,237,241,1) 0%, rgba(237,182,197,1) 100%);
 }
+
 #veneers img {
-    width: 400px;
-    height: 180px;
+    width: 450px;
+    height: 220px;
     float: right;
     padding: 15px;
 }
+
 #prosthesis img {
     width: 450px;
     height: 200px;
     float: left;
     padding: 15px;
 }
+
 #prosthesis p {
-	background-color: #f9eaea;
+     background: linear-gradient(to bottom, rgba(255,237,241,1) 0%, rgba(237,182,197,1) 100%);
 }
+
 #smile-design img {
     width: 450px;
     height: 260px;
@@ -177,122 +232,92 @@ blockquote {
     float: left;
     padding: 15px;
 }
+
 #microprosthetics p {
-	background-color: #f9eaea;
+    background: linear-gradient(to bottom, rgba(255,237,241,1) 0%, rgba(237,182,197,1) 100%);
 }
+
 #temporary-prosthesis img {
     width: 450px;
     height: 260px;
     float: right;
     padding: 15px;
 }
+
 #feedback {
-	background-color: #f9eaea;
-}
-#form {
-    text-align: center;
-    border-bottom:1px solid #777;
-    padding: 1%;
-}
-.form {
-    text-align: center;
-    border-radius: 5px;
-    padding: 20px;
+    background: linear-gradient(to bottom, rgba(255,237,241,1) 0%, rgba(237,182,197,1) 100%);
 }
 
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-}
-input[type=email], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-}
-textarea {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
+#feedback div, p {
+    padding: 10px;
 }
 
-input[type=submit] {
-    width: 50%;
-    background-color: #a50303;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+#contact img {
+    width: 30px;
+    float: left;
+}
+#contact #phone {
+    width: 30px;
+    height: 20px;
+    float: left;
+}
+#contact h4 {
+    margin: 0;
+    margin-left: 40px;
+    font-size: 17px;
 }
 
-input[type=submit]:hover {
-    background-color: #440404;
-}
-#client {
-	margin-right: 20px;
-	text-align: right;
-	font-size: 14px;
-	font-style: italic;
-}
-#client-feedback {
-	font-style: oblique;
-	margin-left: 20px;
-	margin-right: 20px;
+#contact p {
+    margin-top: -4px;
 }
 #contact {
-    column-count: 2;
+    margin-left: 170px;
     font-size: 16px;
-    margin-left: 250px;
+    font-style: italic;
+    column-count: 2;
+    column-width: 50px;
 }
-#contact p {
-	font-style: italic;
+
+iframe {
+    width: 100%;
+    height: 550px;
+    border: 0;
 }
-iframe{
-	width: 100%;
-	height: 550px;
-	border: 0;
-}
+
 footer {
+    background-color: #fff7f8;
     margin: 0;
     padding: 0;
 }
-footer p {
-	width: 300px;
-	color: #a50303;
-	font-size: small;
+
+footer > nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-#footer {
-	margin-bottom: -40px;
-	margin-left: 493px;
-	list-style: none; 
+footer > nav > ul > li {
+    flex: 0 1 auto;
+    margin: 0;
+    padding: 0;
+    transition: all linear 0.1s;
 }
-#footer a {
-	text-decoration: none;
-	color: #a50303;
-	padding:0px 15px;
-	line-height:30px;
-	display: block; 
+
+footer > nav > ul > li:hover {
+    background: rgba(239, 197, 202, 0.96);
 }
-#footer a:hover {
-  	color:#191970;
-}
-#footer li {
-  float:left;
+
+footer > nav > ul > li > a {
+    color: #a50303;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+    max-width: 130px;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    transition: all linear 0.1s;
 }
